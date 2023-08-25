@@ -44,7 +44,7 @@ public class TV {
     }
 
     public void setCanal(int c){
-        if(this.tv.estado && c<121 && c>0)
+        if(this.estado && c<121 && c>0)
             this.canal = c;
     }
 
@@ -53,8 +53,8 @@ public class TV {
     }
 
     public void setVolumen(int v){
-        if(this.tv.estado && v<8 && v>-1)
-            this.tv.volumen=v;
+        if(this.estado && v<8 && v>-1)
+            this.volumen=v;
     }
 
     public void setControl(Control c){
