@@ -8,7 +8,7 @@ public class TV {
     private int volumen;
     private Control control;
 
-    private static int numTV = 0;
+    private static int numTV;
 
     public TV(Marca m,boolean e){
         this.marca = m;
@@ -16,6 +16,7 @@ public class TV {
         this.canal = 1;
         this.volumen = 1;
         this.precio = 500;
+        TV.numTV++;
     }
 
     public Marca getMarca(){
@@ -82,22 +83,22 @@ public class TV {
     }
 
     public void canalUp(){
-        if(this.estado && this.getEstado() && this.getCanal()<120)
+        if(this.estado && this.getEstado() && this.getCanal()<121)
             this.canal++;
     }
 
     public void canalDown(){
-        if(this.estado && this.getEstado() && this.getCanal()>1)
+        if(this.estado && this.getEstado() && this.getCanal()>-1)
             this.canal--;
     }
     
     public void volumenUp(){
-        if(this.estado && this.getEstado() && this.getVolumen()<7)
+        if(this.estado && this.getEstado() && this.getVolumen()<8)
             this.volumen++;
     }
 
     public void volumenDown(){
-        if(this.estado && this.getEstado() && this.getVolumen()>1)
+        if(this.estado && this.getEstado() && this.getVolumen()>0)
             this.volumen--;
     }
 
