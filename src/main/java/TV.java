@@ -17,7 +17,7 @@ public class TV {
         this.volumen = 1;
         this.precio = 500;
     }
-    //Get()
+
     public Marca getMarca(){
         return this.marca;
     }
@@ -60,7 +60,7 @@ public class TV {
     }
 
     public static void setNumTV(int a){
-        numTV = a;
+        TV.numTV = a;
     }
     
     public static int getNumTV(){
